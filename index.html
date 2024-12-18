@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Inventory Management System</h1>
+    </header>
+
+    <!-- Add Product Section -->
+    <section id="add-product">
+        <h2>Add Product</h2>
+        <form id="product-form">
+            <div class="form-group">
+                <label for="description">Product Name:</label>
+                <input type="text" id="description" name="description" placeholder="Enter product name" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="0" placeholder="Enter quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01" min="0" placeholder="Enter price" required>
+            </div>
+            <button type="submit" id="add-product-btn">Add Product</button>
+        </form>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard">
+        <h2>Dashboard</h2>
+        <p>Total Stock Value: <span id="stock-value">0.00</span> USD</p>
+        <p>Total Products: <span id="total-products">0</span></p>
+        <p>Low Stock Products: <span id="low-stock">0</span></p>
+        <p>Out-of-Stock Products: <span id="out-of-stock">0</span></p>
+    </section>
+
+    <!-- Product List -->
+    <section id="product-list">
+        <h2>Product List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Price (USD)</th>
+                    <th>Date Added</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="productTableBody">
+                <!-- Products will be dynamically populated here -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Inventory Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
